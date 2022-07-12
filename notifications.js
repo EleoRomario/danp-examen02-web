@@ -10,7 +10,7 @@ function initFirebase() {
 
 initFirebase();
 
-function sendPushToOneUser(notification) {
+function sendPushNotification(notification) {
     const message = {
         token: notification.tokenId,
         data: {
@@ -21,16 +21,6 @@ function sendPushToOneUser(notification) {
     sendMessage(message);
 }
 
-function sendPushToTopic(notification) {
-    const message = {
-        topic: notification.topic,
-        data: {
-            titulo: notification.titulo,
-            mensaje: notification.mensaje
-        }
-    }
-    sendMessage(message);
-}
 
 module.exports = { sendPushToOneUser, sendPushToTopic }
 

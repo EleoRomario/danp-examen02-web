@@ -20,17 +20,7 @@ app.get("/notificacion", function(req, res) {
 		titulo: "Accidente",
 		mensaje: "Se ha detectado un accidente de trafico en la zona",
 	};
-    Notification.sendPushToOneUser(data);
-});
-
-app.get("/topic", function(req, res) {
-    res.send("Sending Notification to a Topic...");
-    const data = {
-        topic: "test",
-        titulo: "prueba",
-        mensaje: "Message from Nodejs to Topic test"
-    }
-    Notification.sendPushToTopic(data);
+    Notification.sendPushNotification(data);
 });
 
 app.get("/", function(req, res) {
