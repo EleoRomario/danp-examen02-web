@@ -12,13 +12,13 @@ GenerateToken.getAccessToken()
     .catch((err) => console.log("Error: ", err))
 
 
-app.get("/one-user", function(req, res) {
-    res.send("Sending Notification to One user...");
+app.get("/notificacion", function(req, res) {
+    res.send("Notificacion enviada...");
     const data = {
 		tokenId:
 			"ffudtpLQS3KDZbNjquSTHH:APA91bF-3lOO2NRYJ1dpI4jTlJ0AlmBO6vF_k8X0mRiRLofYphtUjwEewniYn6ajaduSpc5pbjTtWdgLeiEsIb79_uV8bZcnvQBMty9yHMiBVV2GR8NRLig2s_bOs9TXwY-FAJUeVbhM",
-		titulo: "Re:codigo",
-		mensaje: "Message from Nodejs to One User",
+		titulo: "Accidente",
+		mensaje: "Se ha detectado un accidente de trafico en la zona",
 	};
     Notification.sendPushToOneUser(data);
 });
