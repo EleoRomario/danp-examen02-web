@@ -22,7 +22,7 @@ function sendPushNotification(notification) {
 }
 
 
-module.exports = { sendPushToOneUser, sendPushToTopic }
+module.exports = { sendPushNotification };
 
 function sendMessage(message) {
     admin.messaging().send(message)
